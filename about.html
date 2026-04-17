@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f3;
+}
+
+/* FLEX LAYOUT TO PUSH FOOTER DOWN */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+
+/* MAIN CONTENT WRAPPER */
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+/* BOX STYLE */
+.box {
+  width: 30%;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #dfe9f3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* CENTER IMAGE */
+.center-image {
+  width: 40%;
+  text-align: center;
+}
+
+.center-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* EXTRA BOX SECTION BELOW */
+.extra-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 40px 60px;
+  gap: 20px;
+}
+
+.extra-box {
+  width: 45%;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h3 {
+  color: #04AA6D;
+}
+
+/* FOOTER (ALWAYS AT BOTTOM) */
+.footer {
+  margin-top: auto;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .wrapper, .extra-section {
+    flex-direction: column;
+  }
+
+  .box, .center-image, .extra-box {
+    width: 100%;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="about.html">About</a></li>
+  <li><a href="staff.html">Staff</a></li>
+  <li><a href="courses.html">Courses</a></li>
+  <li><a href="jobs.html">Jobs</a></li>
+  <li><a href="apply.html">Apply</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+<!-- TOP SECTION -->
+<div class="wrapper">
+
+  <div class="box">
+    <h3>About the Company</h3>
+    <p>
+      Hot Beans is a web development company that helps beginners start their careers in coding.
+      We work on real projects and train new developers in a professional environment.
+    </p>
+
+    <p>
+      Our goal is to support people who have completed web development courses and help them gain real experience.
+    </p>
+  </div>
+
+  <div class="center-image">
+    <img src="images/hotbeans.jpg">
+  </div>
+
+  <div class="box">
+    <h3>Why Join Us</h3>
+    <p>
+      We offer training, support, and real project experience to help new developers improve their skills.
+    </p>
+
+    <p>
+      You will work with other developers, build your portfolio, and gain confidence in a real working environment.
+    </p>
+
+    <p>
+      Apply online to start your journey in web development.
+    </p>
+  </div>
+
+</div>
+
+<!-- EXTRA BOXES BELOW -->
+<div class="extra-section">
+
+  <div class="extra-box">
+    <h3>Our Mission</h3>
+    <p>
+      Our mission is to help new developers gain real skills and move into the web development industry.
+      We believe in learning through real experience and teamwork.
+    </p>
+  </div>
+
+  <div class="extra-box">
+    <h3>Who We Look For</h3>
+    <p>
+      We are looking for motivated learners who have completed web development courses and want to improve their skills.
+      Passion and willingness to learn are more important than experience.
+    </p>
+  </div>
+
+</div>
+
+<!-- FOOTER (STICKS TO BOTTOM) -->
+<div class="footer">
+  © Hot Beans 2026
+</div>
+
+</body>
+</html>

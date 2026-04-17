@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* PAGE LAYOUT FIX (FOOTER CONTROL) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background: url("images/mountain.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* DARK OVERLAY */
+.overlay-bg {
+  background: rgba(0,0,0,0.6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+
+/* HEADER BOX (FIXED - NOT TRANSPARENT) */
+.header-box {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.header {
+  background: rgba(0,0,0,0.85);
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* TEAM GRID */
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  width: 240px;
+  padding: 20px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+
+  color: white;
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* NAME */
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+/* ROLE */
+.role {
+  color: #04AA6D;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* DESCRIPTION */
+.card p {
+  font-size: 13px;
+  color: #f1f1f1;
+}
+
+/* SOCIAL */
+.social {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.icon {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #04AA6D;
+}
+
+/* FOOTER FIXED TO BOTTOM */
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay-bg">
+
+<!-- NAVBAR -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a class="active" href="staff.html">Staff</a></li>
+  <li><a href="courses.html">Courses</a></li>
+  <li><a href="jobs.html">Jobs</a></li>
+  <li><a href="apply.html">Apply</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+<!-- TITLE BOX -->
+<div class="header-box">
+  <div class="header">
+    Meet The Team
+  </div>
+</div>
+
+<!-- TEAM -->
+<div class="team-container">
+
+  <div class="card">
+    <img src="images/employee1.jpg">
+    <h3>Alex Carter</h3>
+    <div class="role">Junior Web Developer</div>
+    <p>Works with HTML, CSS and JavaScript. Helps build and maintain company websites.</p>
+
+    <div class="social">
+      <p><span class="icon">📘 Facebook:</span> alex.carter.dev</p>
+      <p><span class="icon">🐦 Twitter:</span> @alex_carter_web</p>
+      <p><span class="icon">📸 Instagram:</span> alex.codes</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/employee2.jpg">
+    <h3>Sophie Bennett</h3>
+    <div class="role">Trainee Developer</div>
+    <p>Learning front-end development and improving UI design skills.</p>
+
+    <div class="social">
+      <p><span class="icon">📘 Facebook:</span> sophie.bennett.dev</p>
+      <p><span class="icon">🐦 Twitter:</span> @sophie_web</p>
+      <p><span class="icon">📸 Instagram:</span> sophie.uiux</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/employee3.jpg">
+    <h3>Ryan Patel</h3>
+    <div class="role">Backend Developer</div>
+    <p>Works with databases and server-side systems for web applications.</p>
+
+    <div class="social">
+      <p><span class="icon">📘 Facebook:</span> ryan.patel.dev</p>
+      <p><span class="icon">🐦 Twitter:</span> @ryan_backend</p>
+      <p><span class="icon">📸 Instagram:</span> ryan.codes</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/employee4.jpg">
+    <h3>Emily Johnson</h3>
+    <div class="role">UI/UX Designer</div>
+    <p>Designs user-friendly websites and improves user experience.</p>
+
+    <div class="social">
+      <p><span class="icon">📘 Facebook:</span> emily.j.design</p>
+      <p><span class="icon">🐦 Twitter:</span> @emily_uiux</p>
+      <p><span class="icon">📸 Instagram:</span> emily.designs</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Hot Beans 2026
+</div>
+
+</div>
+
+</body>
+</html>

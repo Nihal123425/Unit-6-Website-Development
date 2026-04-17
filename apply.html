@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #f4f6f9, #e8f0ff);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAV */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  display: flex;
+}
+
+ul li a {
+  color: white;
+  padding: 14px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background: #111;
+}
+
+ul li a.active {
+  background: #04AA6D;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #04AA6D, #1e90ff);
+}
+
+/* FORM */
+.form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+@media (max-width:700px){
+  ul {flex-direction: column;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="staff.html">Staff</a></li>
+  <li><a href="courses.html">Courses</a></li>
+  <li><a href="jobs.html">Jobs</a></li>
+  <li><a class="active" href="apply.html">Apply</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+<!-- HEADER -->
+<div class="header">
+  Apply Now
+</div>
+
+<!-- FORM -->
+<div class="form-container">
+
+<form id="applyForm">
+
+  <label>First Name</label>
+  <input type="text" required>
+
+  <label>Last Name</label>
+  <input type="text" required>
+
+  <label>Email</label>
+  <input type="email" required>
+
+  <label>Phone</label>
+  <input type="text" required>
+
+  <label>Position</label>
+  <select id="position">
+    <option value="">Select Position</option>
+    <option>Software Developer</option>
+    <option>IT Support Specialist</option>
+    <option>Cybersecurity Analyst</option>
+  </select>
+
+  <label>Why do you want this job?</label>
+  <textarea required></textarea>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Hot Beans 2026
+</div>
+
+<script>
+
+// AUTO FILL POSITION FROM JOBS PAGE
+const params = new URLSearchParams(window.location.search);
+const job = params.get("position");
+
+if (job) {
+  document.getElementById("position").value = job;
+}
+
+</script>
+
+</body>
+</html>

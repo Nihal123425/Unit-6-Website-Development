@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR (UNCHANGED) */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+
+/* HERO HEADER */
+.header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #04AA6D, #0b6b3a);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* CONTENT WRAPPER */
+.container {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* COURSE CARD */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.card h3 {
+  margin-top: 0;
+  color: #04AA6D;
+  font-size: 18px;
+}
+
+/* TEXT */
+.card p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* FOOTER (STICKS TO BOTTOM) */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 14px;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 700px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="staff.html">Staff</a></li>
+  <li><a class="active" href="courses.html">Courses</a></li>
+  <li><a href="jobs.html">Jobs</a></li>
+  <li><a href="apply.html">Apply</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul> 
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Web Development Courses Available</h1>
+  <p>Explore industry-leading courses designed to boost your skills and career in tech.</p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Udacity: Full Stack Web Developer</h3>
+      <p>
+        Overview: Project-based training for web developers. This course will teach you to build and deploy full-stack, database-backed APIs and web applications. Topics covered include identity access management, server deployment, containerization, data modeling, and API development.
+        <br><br>
+        This program uses 4 sub-courses, each with its own project (like a venue booking database or a trivia API). The capstone project involves building a full-stack web application that combines all of your new skills. Ideal for developers with background skills in Python, HTML, CSS, and Git.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Coursera: Introduction to Web Development</h3>
+      <p>
+        Overview: This course is great for beginners. It covers the basics of web development in 6 modules, including video lectures, quizzes, and hands-on practice.
+        <br><br>
+        You will learn how to structure and host a website, and gain foundational skills in HTML, CSS, and JavaScript. The course culminates in building a simple web application, with an introduction to form validation and JavaScript testing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>TripleTen: Software Engineering Bootcamp</h3>
+      <p>
+        Overview: A 10-month, part-time bootcamp that covers both front-end and back-end development, including JavaScript, React, Node.js, and more.
+        <br><br>
+        The course features project-driven learning, with real-world scenarios that culminate in a final project. There’s a robust career preparation module, including mentoring, externships, and post-graduation job support. With a money-back guarantee if you don’t land a job within six months, TripleTen offers an excellent pathway into tech.
+        <br><br>
+        Graduates have gone on to work at major tech companies like Tesla, Google, and Spotify.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Coursera: HTML, CSS, and JavaScript for Web Developers</h3>
+      <p>
+        Overview: This course covers the fundamentals of web development, including HTML, CSS, and JavaScript. It also teaches how to handle AJAX requests, process JSON data, and use the Bootstrap framework.
+        <br><br>
+        The course concludes with a capstone project where you’ll build a dynamic restaurant website. This is a great introductory course for those looking to gain foundational web development skills.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Scrimba: Frontend Developer Career Path</h3>
+      <p>
+        Overview: Focused on front-end development, this course covers HTML, CSS, JavaScript, React, async JavaScript, and more. It also includes UI design and working with APIs.
+        <br><br>
+        You will engage in code review sessions to improve your coding practices and receive feedback from industry professionals. Upon completion, you'll earn a Scrimba Frontend Developer Certificate. There is also a scholarship option available for those who need financial assistance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Codecademy: Web Development Skills Path</h3>
+      <p>
+        Overview: In this course, you'll learn how to build websites using HTML, style them with CSS, and make them interactive with JavaScript. You’ll also dive into React for front-end development and Node.js with Express for back-end applications.
+        <br><br>
+        Additional topics include version control with Git, SQL basics, and test-driven development (TDD). By the end, you'll have built portfolio-worthy projects like a Yelp API search app and a website for a local coffee shop.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Hot Beans 2026
+</div>
+
+</body>
+</html>
